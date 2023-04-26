@@ -1,0 +1,246 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: Impact, Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, darkgray, lightgray, white)
+}
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+}
+
+nav{
+  background: #101418;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s ease-in;
+}
+a.active, a:hover{
+  background: #1b9bff;
+
+}
+
+header{
+  margin-bottom: 30px;
+}
+
+#main{
+  text-align: center;
+}
+
+.maindiv{
+  display: flex;
+  justify-content: space-around;
+  
+}
+.food{
+padding-left: 10px;
+}
+img{
+  border-radius: 50px;
+}
+
+.signup{
+  text-align: center;
+  box-shadow: 2px 3px 7px black;
+  width: 30vw;
+  margin: auto;
+}
+
+input,datalist{
+  margin: 8px 0;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  font-size: 20px;
+}
+
+.home-btn{
+  font-size: 20px;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 10%;
+  margin-left: 30%;
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 750;
+  margin-top: 10%;
+  transition: 0.35s ease-in;
+}
+.home-btn:hover{
+  background-color: rgb(70, 160, 190);
+}
+.controls{
+  margin-top: -10px;
+}
+.controls button a{
+  color: black;
+  font-size: 17px;
+  background-color: transparent;
+  font-family: Romans;
+  transition: 0.5s ease-in;
+}
+.controls button a:hover{
+  background-color: transparent;
+}
+.controls button:hover{
+  background-color: darkgray;
+}
+.forget a{
+  font-size: 17px;
+  background-color: transparent;
+  font-family: Romans;
+  transition: 0.5s ease-in;
+}
+.forget a:hover{
+  color: black;
+  text-decoration: underline;
+}
+.form-panel{
+  box-shadow: 2px 3px 7px black;
+  width: 30vw;
+  margin: auto;
+}
+
+.customer-profile{
+  width: 15vw;
+  font-family: Romans;
+  box-shadow: 2px 3px 7px black;
+  margin: 20px auto;
+  padding: 16px 10px;
+  border-radius: 5px;
+  display: none;
+  animation: none;
+}
+#hidden-div {
+  animation: none;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  } 30% {opacity: 0.3}
+  60% {opacity: 0.7}
+  100% {
+    opacity: 1;
+  }
+}
+.customer-profile .pay-btn{
+  border: 2px solid black;
+  background-color: transparent;
+  font-family: times;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 30%;
+  margin-top: 5%;
+  transition: 0.4s ease-in;
+}
+.customer-profile .pay-btn:hover{
+  background-color: green;
+  color: white;
+}
+.customer-profile span b{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.confirm-box {
+  position: fixed;
+  top: 10%;
+  left: 60%;
+  font-family: 'Courier New', Courier, monospace;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  display: none;
+}
+
+.confirm-box .message {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.confirm-box .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirm-box button {
+  margin-left: 10px;
+  background-color: #ccc;
+  border: 1px solid black;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.confirm-box button:hover {
+  background-color: #555;
+}
+
+.alert-box {
+  position: fixed;
+  top: 10%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 9999;
+  display: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.alert-message {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .confirm-box {
+    width: 90%;
+  }
+  
+  .alert-box {
+    width: 90%;
+  }
+}

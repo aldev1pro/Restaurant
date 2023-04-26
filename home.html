@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZD fast foods</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+
+    <header class="header" data-header>
+        <div class="container">
+    
+    
+          <nav class="navbar" >
+            <label class="logo">Welcome to ZD's Fast Food </label>
+    
+            <ul class="navbar">
+              
+              <li >
+                <a href="home.html" >Home</a>
+              </li>
+    
+              <li >
+                <a href="about.html">About Us</a>
+              </li>
+    
+              <li >
+                <a href="#food-menu" >Service</a>
+              </li>
+    
+              <li >
+                <a href="contact.html" >Contact Us</a>
+              </li>
+    
+            </ul>
+          </nav>
+        </div>
+        
+    </header>
+
+    <div class="maindiv">
+        <div class="food">
+            <h2>BENACHIN: D200</h2> <br>
+            <img src="img\img1.jfif" alt="food" width="300" height="300"><br>
+            <button class="home-btn" onclick="myfunction()">ORDER</button>
+        </div>
+        <div class="food">
+            <h2>SUPERKANJA: D300</h2> <br>
+            <img src="img\img2.jfif" alt="food" width="300" height="300"><br>
+            <button class="home-btn" onclick="myfunction()">ORDER</button>
+        </div>
+        <div class="food">
+            <h2>FISH PIE: D250</h2> <br>
+            <img src="img\img3.jfif" alt="food" width="300" height="300"><br>
+            <button class="home-btn" onclick="myfunction()">ORDER</button>
+        </div>
+        <div class="food">
+            <h2>DOMODA: D100</h2> <br>
+            <img src="img\img4.jfif" alt="food" width="300" height="300"><br>
+            <button class="home-btn" onclick="myfunction()">ORDER</button>
+        </div>
+    </div>
+
+    <div class="customer-profile" id="profile">
+        <span><b>NAME:</b> Mariyam Jones</span> <br>
+        <span><b>ID:</b>    ZD34</span> <br>
+        <span><b>ORDER:</b> Benachin</span> <br>
+        <span><b>ADDRESS:</b> Bundung</span> <br>
+        <button class="pay-btn" onclick="pay()">PAY</button>
+    </div>
+
+    <div class="confirm-box" id="my-confirm-box">
+      <div class="message">Are you satisfied?</div>
+      <div class="buttons">
+        <button class="btn-yes" onclick="showAlertBox()">Yes</button>
+        <button class="btn-no" onclick="keepConfirmBox()">No</button>
+      </div>
+    </div>
+
+    <div class="alert-box" id="my-alert-box"></div>
+    
+
+
+
+    <script>
+      var confirmBox = document.getElementById("my-confirm-box");
+      function myfunction(){
+          const profile = document.getElementById("profile");
+          var order = "";
+          profile.style.display = "block"
+          profile.style.animation = "fadein 0.5s";
+      }
+
+      function pay(){
+        confirmBox.style.display = "block";
+      }
+
+      function showAlertBox() {
+        hideConfirmBox()
+        var alertBox = document.getElementById("my-alert-box");
+        alertBox.innerHTML = "<div class='alert-message'>Successfully paid!</div>";
+        alertBox.style.display = "block";
+
+        // Hide the alert box after 5 seconds
+        setTimeout(function() {
+          alertBox.style.display = "none";
+        }, 2000);
+      }
+
+      function hideConfirmBox() {
+        confirmBox.style.display = "none";
+      }
+
+
+      function keepConfirmBox() {
+        hideConfirmBox();
+      }
+
+      
+    </script>
+    
+    
+</body>
+</html>

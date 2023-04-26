@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="web.css">
+    <title>Document</title>
+    <style>
+      .signup input[type="submit"], input[type="button"]{
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: 1px solid black;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+        margin: auto;
+        transition: 0.5s ease-in;
+        margin-bottom: 10px;
+      }
+      
+      .signup input[type="submit"]:hover,  input[type="button"]:hover{
+        /* Add hover effect to the submit button */
+        transition: 0.3s ease-in;
+        background-color: #08420b;
+        border: 2px solid black;
+      }
+    </style>
+</head>
+<body>
+
+    <header class="header" data-header>
+        <div class="container">
+    
+    
+          <nav class="navbar" >
+            <label class="logo">Welcome to ZD's Fast Food </label>
+    
+            <ul class="navbar">
+              
+              <li >
+                <a href="home.html" >Home</a>
+              </li>
+    
+              <li >
+                <a href="Nav/about.html">About Us</a>
+              </li>
+    
+              <li >
+                <a href="#">Service</a>
+              </li>
+    
+              <li >
+                <a href="Nav/contact.html" >Contact Us</a>
+              </li>
+    
+            </ul>
+          </nav>
+        </div>
+        
+     </header>
+
+    <div class="signup">
+        <div class="title">
+          <h2 style="color:white; text-shadow: 2px 2px 7px black; margin: 25px;">REGISTER</h2>
+         </div>
+    
+     <form onsubmit="confirmPsw()" action="home.html" class="signup">
+    
+        <div class="field">
+            <div class="form-inner" >
+                <input type="text" placeholder="FirstName">
+            </div>
+            <div class="form-inner">
+                <input type="text" placeholder="LastName">
+            </div>
+            <div class="form-inner">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <div class="form-inner">
+                <input id="psw1" type="password" placeholder="Password">
+            </div>
+            <div class="form-inner">
+               <input id="psw2" type="password" placeholder="Confirm password">
+            </div>
+            <div class="form-inner">
+                <label>Gender: </label><br>
+                <input list="genders" name="gender" id="gender">
+                <datalist id="genders">
+                  <option value="Male">
+                  <option value="Female">
+                </datalist>
+               </div>
+            <div class="form-inner">
+                <label for="country">Country: </label><br>
+                <input list="countrys" name="country" id="country">
+                <datalist id="countrys" >
+                <option value="Gambia">
+                <option value="Senegal">
+                <option value="mali">
+                </datalist>
+               </div>  
+            <div class="form-inner">
+                <input id="sbmt" type="submit" Value="Submit">
+                <a href="login.html"><input id="back" type="button" Value="Go Back"></a>
+            </div>     
+            
+        </div>  
+        
+      </form>
+    </div>
+    
+</body>
+</html>
